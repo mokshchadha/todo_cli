@@ -32,7 +32,9 @@ var showCmd = &cobra.Command{
 		if err != nil {
 			log.Fatal("Could not read all from db.csv")
 		}
-		fmt.Println(records)
+		for _, record := range records {
+			fmt.Println(record)
+		}
 
 	},
 }
